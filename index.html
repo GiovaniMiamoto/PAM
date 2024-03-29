@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .container {
+            margin-bottom: 20px;
+        }
+        .destaque {
+            font-weight: bold;
+            color: red;
+        }
+        .escondido {
+        display: none;
+        }
+    </style> 
+</head>
+<body>
+    <button onclick="clicado()">CLique aqui</button>
+
+    <!--Este método é usado para selecionar um elemento específico na página pelo seu ID único.-->
+    <div id="meuElemento">Clique no botão!</div>
+    <button onclick="mudarTexto()">Clique Aqui</button>
+
+    <!--Este método é usado para selecionar todos os elementos com o nome da tag especificada.-->    
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button onclick="adicionarClasse()">Adicionar Classe</button>
+    
+    <!--Este método é usado para selecionar todos os elementos que possuem a classe especificada.-->
+    <div class="minhaClasse">Elemento 1</div>
+    <div class="minhaClasse">Elemento 2</div>
+    <button onclick="alternarVisibilidade()">Alternar Visibilidade</button>
+
+    <!--Este método retorna o primeiro elemento que corresponde a um seletor CSS especificado.-->
+        <div class="destaque">Texto Destacado</div>
+    <button onclick="destacarElemento()">Destacar</button>
+    
+    <!--Este método retorna todos os elementos que correspondem a um seletor CSS especificado, em forma de NodeList.-->
+    <p class="paragrafo">Primeiro Parágrafo</p>
+    <p class="paragrafo">Segundo Parágrafo</p>
+    <button onclick="alterarParagrafos()">Alterar Parágrafos</button>
+    
+    <!--Este evento é acionado quando o ponteiro do mouse é movido sobre um elemento.-->
+    <div onmouseover="mudarCor(this)" style="width: 100px; height: 100px; background-color: red;"></div>
+    
+    <!--Este evento é acionado quando um elemento recebe o foco.-->
+    <input type="text" onfocus="mudarCor(this)" onblur="restaurarCor(this)" placeholder="Clique aqui">
+
+    <!--Este evento é acionado quando o valor de um elemento muda (útil para campos de formulário).-->
+    <select onchange="mostrarSelecao(this)">
+        <option value="opcao1">Opção 1</option>
+        <option value="opcao2">Opção 2</option>
+        <option value="opcao3">Opção 3</option>
+    </select>
+    <p id="selecao"></p>
+
+    <!--Este evento é acionado quando um formulário é enviado.-->
+    <form onsubmit="validarFormulario()">
+        <input type="text" name="nome" placeholder="Nome">
+        <input type="email" name="email" placeholder="Email">
+        <button type="submit">Enviar</button>
+    </form>
+    <!--Uma função nomeada é uma função que possui um nome específico.-->
+    <button onclick="saudacao()">Clique para saudação</button>
+
+    <!-- Uma função que aceita argumentos e retorna um valor. -->
+    <p>Resultado da soma: <span id="resultadoSoma"></span></p>
+    <button onclick="calcularSoma()">Calcular Soma</button>
+
+    <!-- Uma função que é usada para criar objetos. -->
+    <button onclick="criarPessoa()">Criar Pessoa</button>
+
+    <!-- Uma função atribuída a uma variável. -->
+    <p>Resultado da multiplicação: <span id="resultadoMultiplicacao"></span></p>
+    <button onclick="calcularMultiplicacao()">Calcular Multiplicação</button>
+    
+    <!-- Uma forma mais concisa de escrever funções.-->
+    <p>Resultado do quadrado: <span id="resultadoQuadrado"></span></p>
+    <button onclick="calcularQuadrado()">Calcular Quadrado</button>
+
+    <!--Contador-->
+    <p id="contador">Número de cliques: 0</p>
+    <button id="botao">Clique Aqui</button>
+
+    <!--Função caixa alta-->
+    <input type="text" id="entrada" placeholder="Digite um texto">
+    <button onclick="converterParaMaiusculas()">Converter para Maiúsculas</button>
+    <p id="resultado"></p>
+
+    <!--Soma-->
+    <label for="num1">Número 1:</label>
+    <input type="number" id="num1" placeholder="Digite um número">
+    <br>
+    <label for="num2">Número 2:</label>
+    <input type="number" id="num2" placeholder="Digite outro número">
+    <br>
+    <button onclick="somarNumeros()">Somar Números</button>
+    <p id="resultado"></p>
+</body>
+</html>
+<script src="script.js"></script>
